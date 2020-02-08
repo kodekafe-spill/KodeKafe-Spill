@@ -13,6 +13,7 @@ public class playerController : MonoBehaviour
 
     void Update()
     {
-        
+        float moveX = new Vector3("Horizontal");
+        float moveY = new Vector3("Vertical");
     }
 }
