@@ -6,9 +6,9 @@ using UnityEngine.UI;
 public class pauseMenu : MonoBehaviour
 {
     public GameObject menu;
-    public bool PauseMenu = false;
+    private bool PauseMenu = false; // Big pause menu thing
 
-    public void exit()
+    public void Exit()
     {
         PauseMenu = false;
         Cursor.visible = false;
@@ -29,7 +29,7 @@ public class pauseMenu : MonoBehaviour
             if (PauseMenu != true)
             {
                 Cursor.lockState = CursorLockMode.Locked;
-                exit();
+                Exit();
             }
         }
     }
