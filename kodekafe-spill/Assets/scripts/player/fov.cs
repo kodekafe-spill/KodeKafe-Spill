@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class fov : MonoBehaviour
 {
 
-    public float FOV = 60f;
+    public float FOV;
     public Camera cam;
 
     public Text fovText;
