@@ -13,16 +13,23 @@ public class pauseMenu : MonoBehaviour
 
     }
 
+    public void exit()
+    {
+        this.exit();
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            Cursor.visible = true;
             PauseMenu = !PauseMenu;
             Time.timeScale = 0;
             menu.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             if (PauseMenu != true)
             {
+                Cursor.visible = false;
                 Time.timeScale = 1;
                 menu.SetActive(false);
                 Cursor.lockState = CursorLockMode.Locked;

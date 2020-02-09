@@ -16,6 +16,7 @@ public class mouseLook : MonoBehaviour
 
     void Start()
     {
+        Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         mouseSens = PlayerPrefs.GetFloat("Sens");
     }
