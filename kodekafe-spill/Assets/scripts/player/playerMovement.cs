@@ -9,6 +9,8 @@ public class playerMovement : MonoBehaviour
     public float speed = 8f;
     public float gravity = -9.81f;
     public float jumpHeight = 3f;
+    public float sprintSpeed = 12f;
+    public float walkSpeed = 8f;
 
     public Transform groundCheck;
     public float groundDistance = 0.4f;
@@ -42,5 +44,16 @@ public class playerMovement : MonoBehaviour
 
         controller.Move(velocity * Time.deltaTime);
 
+    }
+
+    private void FixedUpdate()
+    {
+        if(Input.GetKey(KeyCode.LeftShift))
+        {
+            speed = sprintSpeed;
+        } else
+        {
+            speed = walkSpeed;
+        }
     }
 }
