@@ -10,5 +10,10 @@ public class bullet : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
+
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), 1f))
+        {
+            Destroy(gameObject);
+        }
     }
 }
