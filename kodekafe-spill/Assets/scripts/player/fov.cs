@@ -13,7 +13,7 @@ public class fov : MonoBehaviour
 
     void Start()
     {
-
+        FOV = PlayerPrefs.GetFloat("FOV");
     }
 
     void Update()
@@ -25,5 +25,6 @@ public class fov : MonoBehaviour
     {
         FOV = newFov;
         cam.fieldOfView = newFov;
+        PlayerPrefs.SetFloat("FOV", newFov);
     }
 }
