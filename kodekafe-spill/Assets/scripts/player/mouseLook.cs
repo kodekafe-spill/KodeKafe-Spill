@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class mouseLook : MonoBehaviour
 {
@@ -11,13 +12,23 @@ public class mouseLook : MonoBehaviour
 
     float xRotation = 0f;
 
+    public Text text;
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        mouseSens = PlayerPrefs.GetFloat("Sens");
+    }
+
+    public void adjustSens(float newSens)
+    {
+        mouseSens = newSens;
+        PlayerPrefs.SetFloat("Sens", newSens);
     }
 
     void Update()
     {
+        text.text = mouseSens.ToString();
         float mouseX = Input.GetAxis("Mouse X") * mouseSens * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSens * Time.deltaTime;
 
