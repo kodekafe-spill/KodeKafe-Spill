@@ -7,6 +7,7 @@ public class Shoot : MonoBehaviour
 
     public GameObject bullet;
     public Transform firePoint;
+    public AudioSource shootSound;
 
     // Update is called once per frame
     void Update()
@@ -14,6 +15,7 @@ public class Shoot : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Instantiate(bullet, firePoint.position, transform.rotation);
+            shootSound.Play();
         }
     }
 }
