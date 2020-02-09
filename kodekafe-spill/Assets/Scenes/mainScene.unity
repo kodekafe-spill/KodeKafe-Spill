@@ -5193,7 +5193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FOV: 60
   cam: {fileID: 534669904}
-  fovText: {fileID: 0}
+  fovText: {fileID: 479030434}
 --- !u!1 &8238883890447955715
 GameObject:
   m_ObjectHideFlags: 0
