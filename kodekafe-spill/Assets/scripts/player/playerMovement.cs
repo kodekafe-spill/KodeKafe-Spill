@@ -19,6 +19,8 @@ public class playerMovement : MonoBehaviour
     Vector3 velocity;
     bool isGrounded;
 
+    public Camera cam;
+
     void Update()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
@@ -44,16 +46,5 @@ public class playerMovement : MonoBehaviour
 
         controller.Move(velocity * Time.deltaTime);
 
-    }
-
-    private void FixedUpdate()
-    {
-        if(Input.GetKey(KeyCode.LeftShift))
-        {
-            speed = sprintSpeed;
-        } else
-        {
-            speed = walkSpeed;
-        }
     }
 }
