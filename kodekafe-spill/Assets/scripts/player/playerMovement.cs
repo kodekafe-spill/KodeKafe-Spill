@@ -24,6 +24,7 @@ public class playerMovement : MonoBehaviour
     void Update()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+        Debug.Log(isGrounded.ToString());
 
         if(isGrounded && velocity.y < 0)
         {
@@ -50,7 +51,6 @@ public class playerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _ = GetComponent<fov>().FOV + 100;
         if (Input.GetKey(KeyCode.LeftShift))
         {
             if (isGrounded)
