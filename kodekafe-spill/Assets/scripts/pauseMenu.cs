@@ -8,14 +8,13 @@ public class pauseMenu : MonoBehaviour
     public GameObject menu;
     public bool PauseMenu = false;
 
-    void Start()
-    {
-
-    }
-
     public void exit()
     {
-        this.exit();
+        PauseMenu = false;
+        Cursor.visible = false;
+        Time.timeScale = 1;
+        menu.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()
@@ -29,10 +28,8 @@ public class pauseMenu : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             if (PauseMenu != true)
             {
-                Cursor.visible = false;
-                Time.timeScale = 1;
-                menu.SetActive(false);
                 Cursor.lockState = CursorLockMode.Locked;
+                exit();
             }
         }
     }
