@@ -47,4 +47,17 @@ public class playerMovement : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
 
     }
+
+    private void FixedUpdate()
+    {
+        float fov = GetComponent<fov>().FOV + 100;
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            
+            speed = sprintSpeed;
+        } else
+        {
+            speed = walkSpeed;
+        }
+    }
 }
