@@ -9,7 +9,8 @@ public class Shoot : MonoBehaviour
     public Transform firePoint;
     public AudioSource shootSound;
 
-    // Update is called once per frame
+    bool isPaused = false;
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0))

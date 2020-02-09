@@ -51,14 +51,18 @@ public class playerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        float newFov = GetComponent<fov>().FOV;
+        float oldFov = GetComponent<fov>().FOV;
         if (Input.GetKey(KeyCode.LeftShift))
         {
             if (isGrounded)
             {
+                newFov += 20;                
                 speed = sprintSpeed;
             }
         } else
         {
+            oldFov -= 20;
             speed = walkSpeed;
         }
     }
