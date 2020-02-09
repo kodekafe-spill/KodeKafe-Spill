@@ -53,8 +53,10 @@ public class playerMovement : MonoBehaviour
         float fov = GetComponent<fov>().FOV + 100;
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            
-            speed = sprintSpeed;
+            if (isGrounded)
+            {
+                speed = sprintSpeed;
+            }
         } else
         {
             speed = walkSpeed;
