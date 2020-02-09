@@ -5,18 +5,17 @@ using UnityEngine.UI;
 
 public class pauseMenu : MonoBehaviour
 {
-
     public GameObject menu;
     public bool PauseMenu = false;
 
     void Start()
     {
-        
+
     }
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             PauseMenu = !PauseMenu;
             Time.timeScale = 0;
