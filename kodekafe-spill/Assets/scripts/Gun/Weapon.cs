@@ -40,7 +40,6 @@ public class Weapon : MonoBehaviour
 
         if (Input.GetKeyDown(reloadKey))
         {
-            Debug.Log("RELOAD");
             Reload();
         }
     }
