@@ -8,6 +8,7 @@ public class Shoot : MonoBehaviour
     public GameObject bullet;
     public Transform firePoint;
     public AudioSource shootSound;
+    public ParticleSystem muzzleFlash;
 
     bool isPaused = false;
 
@@ -17,6 +18,7 @@ public class Shoot : MonoBehaviour
         {
             Instantiate(bullet, firePoint.position, transform.rotation);
             shootSound.Play();
+            muzzleFlash.Play();
         }
     }
 }
