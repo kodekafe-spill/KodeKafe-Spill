@@ -15,9 +15,6 @@ public class mouseLook : MonoBehaviour
     public float _upRecoil;
     public float _sideRecoil;
 
-    public float _upRecoil;
-    public float _sideRecoil;
-
     void Start()
     {
         Cursor.visible = false;
