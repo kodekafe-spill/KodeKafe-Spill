@@ -9,16 +9,9 @@ public class fov : MonoBehaviour
     public float FOV;
     public Camera cam;
 
-    public Text fovText;
-
     void Start()
     {
         FOV = PlayerPrefs.GetFloat("FOV");
-    }
-
-    void Update()
-    {
-        fovText.text = FOV.ToString();
     }
 
     public void adjustFov (float newFov)
