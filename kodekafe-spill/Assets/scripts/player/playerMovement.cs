@@ -50,8 +50,8 @@ public class playerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        float newFov = GetComponent<fov>().FOV;
-        float oldFov = GetComponent<fov>().FOV;
+        float newFov = PlayerPrefs.GetFloat("FOV");
+        float oldFov = PlayerPrefs.GetFloat("FOV");
         if (Input.GetKey(KeyCode.LeftShift))
         {
             if (isGrounded)

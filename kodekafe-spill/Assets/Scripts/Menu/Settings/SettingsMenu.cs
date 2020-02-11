@@ -53,9 +53,14 @@ public class SettingsMenu : MonoBehaviour
         Screen.fullScreen = isFullscreen;
     }
 
-    public void SetSensitivity(int sens)
+    public void SetSensitivity(float sens)
     {
         PlayerPrefs.SetFloat("Sens", sens);
+    }
+
+    public void SetFOV(float fov)
+    {
+        PlayerPrefs.SetFloat("FOV", fov);
     }
 
 }
