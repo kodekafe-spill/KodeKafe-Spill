@@ -23,6 +23,10 @@ public class playerMovement : MonoBehaviour
 
     void Update()
     {
+
+        cam.fieldOfView = PlayerPrefs.GetFloat("FOV");
+
+
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if(isGrounded && velocity.y < 0)
@@ -46,23 +50,5 @@ public class playerMovement : MonoBehaviour
 
         controller.Move(velocity * Time.deltaTime);
 
-    }
-
-    private void FixedUpdate()
-    {
-        float newFov = PlayerPrefs.GetFloat("FOV");
-        float oldFov = PlayerPrefs.GetFloat("FOV");
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            if (isGrounded)
-            {
-                newFov += 20;                
-                speed = sprintSpeed;
-            }
-        } else
-        {
-            oldFov -= 20;
-            speed = walkSpeed;
-        }
     }
 }

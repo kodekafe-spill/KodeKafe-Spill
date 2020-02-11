@@ -15,6 +15,11 @@ public class mouseLook : MonoBehaviour
     public float _upRecoil;
     public float _sideRecoil;
 
+    public void SetSensitivity(float sens)
+    {
+        mouseSens = sens;
+    }
+
     void Start()
     {
         Cursor.visible = false;
@@ -23,9 +28,7 @@ public class mouseLook : MonoBehaviour
     }
 
     void Update()
-    {
-        mouseSens = PlayerPrefs.GetFloat("Sens");
-
+    { 
         float mouseX = Input.GetAxis("Mouse X") * mouseSens * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSens * Time.deltaTime;
 
