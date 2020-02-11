@@ -7622,6 +7622,21 @@ PrefabInstance:
       propertyPath: m_Value
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 8172845723439925181, guid: 0c92a9b379140ed43a84ea629837e802,
+        type: 3}
+      propertyPath: m_MinValue
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8172845723439925181, guid: 0c92a9b379140ed43a84ea629837e802,
+        type: 3}
+      propertyPath: m_MaxValue
+      value: 1200
+      objectReference: {fileID: 0}
+    - target: {fileID: 8172845723439925181, guid: 0c92a9b379140ed43a84ea629837e802,
+        type: 3}
+      propertyPath: m_Value
+      value: 700
+      objectReference: {fileID: 0}
     - target: {fileID: 8327383621890227239, guid: 0c92a9b379140ed43a84ea629837e802,
         type: 3}
       propertyPath: player
