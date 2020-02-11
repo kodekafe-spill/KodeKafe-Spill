@@ -22,12 +22,6 @@ public class mouseLook : MonoBehaviour
         mouseSens = PlayerPrefs.GetFloat("Sens");
     }
 
-    public void adjustSens(float newSens)
-    {
-        mouseSens = newSens;
-        PlayerPrefs.SetFloat("Sens", newSens);
-    }
-
     void Update()
     {
         float mouseX = Input.GetAxis("Mouse X") * mouseSens * Time.deltaTime;
@@ -41,5 +35,7 @@ public class mouseLook : MonoBehaviour
 
         _upRecoil = 0f;
         _sideRecoil = 0f;
+
+        mouseSens = PlayerPrefs.GetFloat("Sens");
     }
 }
